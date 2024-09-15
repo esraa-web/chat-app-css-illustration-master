@@ -1,0 +1,336 @@
+:root {
+    /* (sub-heading at the top of the app UI) */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    /* (chat on the left) */
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    /* (chat on the right) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    /* (placeholder text) */
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    /*  (main heading) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (paragraph) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+    /* linear gradient */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+
+    --White: hsl(0, 0%, 100%);
+    /* (app background) */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* (submit button background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (radio button outline) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+    width: 60%;
+  
+
+}
+
+.booking-info {
+    padding: 100px;
+}
+
+.booking-info h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    padding: 20px 0;
+    font-weight: 500;
+}
+
+.booking-info p {
+    color: var(--Dark-Grayish-Violet);
+    line-height: 25px;
+    font-weight: 400;
+
+}
+
+.linear-bg-left,
+.linear-bg-right {
+    background: rgb(136, 56, 255);
+    background: linear-gradient(0deg, rgba(136, 56, 255, 1) 0%, rgba(233, 66, 255, 1) 100%);
+    height: 650px;
+    width: 30%;
+    border-radius: 0 0 250px 250px;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.linear-bg-left {
+    /* margin-left: -100px; */
+    left: -100px;
+}
+
+.linear-bg-right {
+    rotate: 180deg;
+    /* margin-right: -120px;
+    margin-top: 120px; */
+    right: -200px;
+    bottom: -100px;
+    opacity: .03;
+
+}
+
+.phone-screen {
+    height: 520px;
+    width: 800px;
+    border: 10px solid var(--White);
+    border-radius: 20px;
+    margin-left: -50px;
+    background: var(--Light-Grayish-Violet);
+    font-size: 10px;
+    position: relative;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+
+.info-person {
+    background: rgb(136, 56, 255);
+    background: linear-gradient(90deg, rgba(136, 56, 255, 1) 0%, rgba(233, 66, 255, 1) 100%);
+    display: flex;
+    color: var(--White);
+    padding: 25px 0 15px 0;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 15px;
+    justify-content: space-around;
+}
+
+.space {
+    height: 15px;
+    width: 150px;
+    background: var(--White);
+    position: absolute;
+    top: -2px;
+    left: 20%;
+    border-radius: 0 0 10px 10px;
+
+}
+
+.avatar {
+    display: flex;
+    justify-content: start;
+}
+
+.avatar img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 1px;
+    background: var(--White);
+}
+
+.name {
+    padding: 2px 10px;
+}
+
+.person-name {
+    font-size: 1.2em;
+}
+
+.status {
+    font-size: .8em;
+}
+
+img {
+    width: 100px;
+}
+
+.left-chat {
+    color: var(--Moderate-Violet);
+}
+
+.chatting {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+
+
+}
+
+.left-chat {
+    width: 70%;
+    color: var(--Moderate-Violet);
+    background: #ede5f4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0.8);
+    border-radius: 15px 10px 15px 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 8px;
+    align-self: flex-start;
+    font-size: 0.9em;
+}
+
+.right-chat {
+    width: 70%;
+    color: var(--Desaturated-Dark-Violet);
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0.8);
+    border-radius: 15px 10px 5px 15px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    align-self: flex-end;
+    font-size: 0.9em;
+}
+
+.auto {
+    width: auto;
+}
+
+.images {
+
+    display: flex;
+    align-self: flex-end;
+
+}
+
+.images img {
+    border-radius: 10px;
+    border: 2px solid var(--Desaturated-Dark-Violet);
+    margin: 5px;
+    width: 40px;
+    align-self: end;
+}
+
+.price-details {
+    display: flex;
+    width: 80%;
+    background: rgb(136, 56, 255);
+    background: linear-gradient(270deg, rgba(136, 56, 255, 1) 0%, rgba(233, 66, 255, 1) 100%);
+    border-radius: 10px 10px 10px 5px;
+    color: var(--White);
+    margin-bottom: 5px;
+    padding: 5px;
+    line-height: 25px;
+
+
+}
+
+.price-details p {
+    padding: 0 5px;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 2px;
+
+}
+
+.typing {
+    color: var(--Grayish-Blue);
+    padding: 5px;
+    border-radius: 25px;
+    background: #fff;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+
+button {
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 6px;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:1024px) {
+    body {
+        max-width: 375px;
+        overflow: auto;
+
+    }
+
+    .container {
+        display: block;
+        margin: 80px auto;
+
+    }
+
+    .phone-screen {
+        height: 530px;
+        width: 250px;
+        margin: 0 auto;
+
+        
+
+    }
+
+    .booking-info {
+        padding: 1px;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+
+    .booking-info h1 {
+        font-size: 1.7em;
+        padding: 40px 0 20px 0;
+        font-weight: 700;
+
+    }
+
+    .linear-bg-left,
+    .linear-bg-right {
+        height: 400px;
+        width: 65%;
+    }
+
+    .linear-bg-left {
+        margin-left: 50px;
+        left: -100px;
+    }
+
+    .linear-bg-right {
+
+        /* margin-right: -120px;
+    margin-top: 120px; */
+        right: -50px;
+        bottom: -500px;
+    
+
+    }
+
+
+}
